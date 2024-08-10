@@ -22,7 +22,7 @@ Rapport de Projet
 Mediathèque
 
 
-L’étude et les correctifs du code fourni 
+ # L’étude et les correctifs du code fourni 
 
 Explication des changements : 
 - Les classes ne sont pas bien défini. L’utilisation la plus simple est celle avec une classe parent dont hérites les autres classes enfants. Par exemple Media comme parent et les enfants seront Livre, DVD, CD.
@@ -32,7 +32,7 @@ J’ai remis les lignes sous la classe pour qu’ils soient tous alignés, ce qu
 - J’ai rajouter des fonctions manquantes comme le type de media pour faciliter l’ajout par les bibliothécaires.
 
 
-La mise en place des fonctionnalités demandées 
+# La mise en place des fonctionnalités demandées 
 
 « Il y aura deux applications à déployer : 
 • Une application principale qui ne sera accessible qu’aux bibliothécaires. 
@@ -55,7 +55,7 @@ la boucle « for livre » est une fonctionnalité pour les emprunt et les disp
  La fonction d’emprunt a uniquement été crée pour livre, mais l’ajout pour les autres media suivrait la même logique
 
 
-Stratégies des testes
+ # Stratégies des testes
 
 Dans l’ordre :  
 - Le premier test crée un utilisateur bibliothecaire et se connecte pour tester la sélection de rôle et le login.
@@ -78,7 +78,7 @@ Et il fini par creer les media livre, dvd et cd pour tester la view correspondan
 
 
 
-une base de données avec des données test 
+# une base de données avec des données test 
 
 
 Les données dans le test sont présent pour ajouter des emprunteurs dans la liste et des medias pour tester les emprunts. 

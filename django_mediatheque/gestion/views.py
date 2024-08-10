@@ -160,14 +160,12 @@ def list_medias_view(request):
     cds = CD.objects.all()
     jeux_de_plateau = JeuDePlateau.objects.all()
 
-    # Create a list to hold media statuses
     media_statuses = []
 
     for livre in livres:
         status = f"{livre.name} - {livre.auteur} (Emprunté)" if not livre.disponible else f"{livre.name} (Disponible)"
         media_statuses.append(status)
 
-    # Pass this to the template
     return render(request, 'gestion/bibliothecaire/list_medias.html', {
         'livres': media_statuses,  # use media_statuses instead of livres
         'dvds': dvds,
@@ -223,7 +221,7 @@ def list_medias_membre_view(request):
 logger = logging.getLogger(__name__)
 
 
-def my_view(request):
+def log(request):
     logger.debug('This is a debug message')
     logger.info('This is an info message')
     logger.warning('This is a warning message')

@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-from datetime import timedelta
 
 
 class Emprunteur(models.Model):
@@ -41,17 +40,16 @@ class JeuDePlateau(models.Model):
 
 
 class Emprunt(models.Model):
-    emprunteur = models.ForeignKey(Emprunteur, on_delete=models.CASCADE)
-    livre = models.ForeignKey(Livre, null=True, blank=True, on_delete=models.CASCADE)
-    dvd = models.ForeignKey(DVD, null=True, blank=True, on_delete=models.CASCADE)
-    cd = models.ForeignKey(CD, null=True, blank=True, on_delete=models.CASCADE)
-    date_emprunt = models.DateField(default=timezone.now)
-    date_retour = models.DateField(default=timezone.now() + timedelta(days=7))
-    returned = models.BooleanField(default=False)
+    emprunteur = models.ForeignKey(Emprunteur, on_delete=models.CASCADE)  # Corrigé ici
+    livre = models.ForeignKey(Livre, on_delete=models.CASCADE, null=True, blank=True)
+    cd = models.ForeignKey(CD, on_delete=models.CASCADE, null=True, blank=True)
+    dvd = models.ForeignKey(DVD, on_delete=models.CASCADE, null=True, blank=True)
+    date_emprunt = models.DateTimeField(auto_now_add=True)
+    date_retour = models.DateTimeField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        if self.returned:
+        if self.date_retour and self.date_retour < timezone.now():
             if self.livre:
                 self.livre.disponible = True
                 self.livre.save()
@@ -61,7 +59,5 @@ class Emprunt(models.Model):
             if self.cd:
                 self.cd.disponible = True
                 self.cd.save()
-
-        if not self.returned and self.date_retour < timezone.now():
             self.emprunteur.bloque = True
             self.emprunteur.save()

@@ -11,6 +11,8 @@ Dans un terminal :
 
 # Pour lancer un serveur local
 
+( ` python manage.py loaddata fixtures.json`) -> Pour crée des donnéés tests
+
 `python manage.py makemigrations`
 `python manage.py migrate`
 `python manage.py runserver`

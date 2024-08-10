@@ -1,0 +1,3 @@
+[submodule "django_mediathequ"]
+	path = django_mediathequ
+	url = https://github.com/Drocinera/Python_Mediatheque.git

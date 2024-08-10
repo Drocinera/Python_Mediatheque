@@ -1,0 +1,13 @@
+{% extends 'gestion/base.html' %}
+
+{% block title %}Mettre à Jour un Membre{% endblock %}
+
+{% block content %}
+    <h2>Mettre à Jour un Membre</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Mettre à jour</button>
+    </form>
+    <a href="{% url 'gestion:liste_membres' %}">Retour à la liste des membres</a>
+{% endblock %}

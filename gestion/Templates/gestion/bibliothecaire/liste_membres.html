@@ -1,0 +1,13 @@
+{% extends 'gestion/base.html' %}
+
+{% block title %}Liste des Membres{% endblock %}
+
+{% block content %}
+    <h2>Liste des Membres</h2>
+    <ul>
+        {% for membre in membres %}
+            <li>{{ membre.name }} - <a href="{% url 'gestion:mettre_a_jour_membre' membre.id %}">Modifier</a> | <a href="{% url 'gestion:supprimer_membre' membre.id %}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'gestion:creer_membre' %}">Ajouter un nouveau membre</a>
+{% endblock %}

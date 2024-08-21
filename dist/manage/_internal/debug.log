@@ -1,0 +1,58 @@
+DEBUG 2024-08-21 15:25:11,389 utils (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+DEBUG 2024-08-21 15:25:11,393 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2024-08-21 15:25:14,718 utils (0.015) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-08-21 13:25:14.714170' AND "django_session"."session_key" = '01fmtu2c7b62u3enia7ja1x8vsfw1jyu') LIMIT 21; args=('2024-08-21 13:25:14.714170', '01fmtu2c7b62u3enia7ja1x8vsfw1jyu'); alias=default
+DEBUG 2024-08-21 15:25:14,724 utils (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 3 LIMIT 21; args=(3,); alias=default
+INFO 2024-08-21 15:25:14,739 basehttp "GET / HTTP/1.1" 200 385
+DEBUG 2024-08-21 15:25:24,830 utils (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-08-21 13:25:24.825554' AND "django_session"."session_key" = '01fmtu2c7b62u3enia7ja1x8vsfw1jyu') LIMIT 21; args=('2024-08-21 13:25:24.825554', '01fmtu2c7b62u3enia7ja1x8vsfw1jyu'); alias=default
+DEBUG 2024-08-21 15:25:24,832 utils (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 3 LIMIT 21; args=(3,); alias=default
+INFO 2024-08-21 15:25:24,837 basehttp "GET /gestion/bibliothecaire/home HTTP/1.1" 200 599
+DEBUG 2024-08-21 15:25:26,536 utils (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-08-21 13:25:26.532352' AND "django_session"."session_key" = '01fmtu2c7b62u3enia7ja1x8vsfw1jyu') LIMIT 21; args=('2024-08-21 13:25:26.532352', '01fmtu2c7b62u3enia7ja1x8vsfw1jyu'); alias=default
+DEBUG 2024-08-21 15:25:26,543 utils (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 3 LIMIT 21; args=(3,); alias=default
+DEBUG 2024-08-21 15:25:26,548 utils (0.015) SELECT 1 AS "a" FROM "auth_group" INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") WHERE ("auth_user_groups"."user_id" = 3 AND "auth_group"."name" = 'Bibliothécaires') LIMIT 1; args=(1, 3, 'Bibliothécaires'); alias=default
+INFO 2024-08-21 15:25:26,579 basehttp "GET /gestion/media/creer/ HTTP/1.1" 200 1401
+DEBUG 2024-08-21 15:25:28,932 utils (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-08-21 13:25:28.930305' AND "django_session"."session_key" = '01fmtu2c7b62u3enia7ja1x8vsfw1jyu') LIMIT 21; args=('2024-08-21 13:25:28.930305', '01fmtu2c7b62u3enia7ja1x8vsfw1jyu'); alias=default
+DEBUG 2024-08-21 15:25:28,939 utils (0.016) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 3 LIMIT 21; args=(3,); alias=default
+DEBUG 2024-08-21 15:25:28,942 utils (0.000) SELECT "gestion_livre"."id", "gestion_livre"."name", "gestion_livre"."auteur", "gestion_livre"."date_emprunt", "gestion_livre"."disponible", "gestion_livre"."emprunteur_id" FROM "gestion_livre"; args=(); alias=default
+DEBUG 2024-08-21 15:25:28,947 utils (0.000) SELECT "gestion_dvd"."id", "gestion_dvd"."name", "gestion_dvd"."realisateur", "gestion_dvd"."date_emprunt", "gestion_dvd"."disponible", "gestion_dvd"."emprunteur_id" FROM "gestion_dvd"; args=(); alias=default
+DEBUG 2024-08-21 15:25:28,948 utils (0.000) SELECT "gestion_cd"."id", "gestion_cd"."name", "gestion_cd"."artiste", "gestion_cd"."date_emprunt", "gestion_cd"."disponible", "gestion_cd"."emprunteur_id" FROM "gestion_cd"; args=(); alias=default
+DEBUG 2024-08-21 15:25:28,950 utils (0.000) SELECT "gestion_jeudeplateau"."id", "gestion_jeudeplateau"."name", "gestion_jeudeplateau"."createur" FROM "gestion_jeudeplateau"; args=(); alias=default
+DEBUG 2024-08-21 15:25:28,951 base Exception while resolving variable 'is_bibliothecaire' in template 'gestion/bibliothecaire/list_medias.html'.
+Traceback (most recent call last):
+  File "django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "django\template\context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_bibliothecaire'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'is_bibliothecaire'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "django\template\base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'is_bibliothecaire'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "django\template\base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_bibliothecaire] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000022FC0B94720>>, 'request': <WSGIRequest: GET '/gestion/medias/'>, 'user': <SimpleLazyObject: <User: Biblio1>>, 'perms': PermWrapper(<SimpleLazyObject: <User: Biblio1>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/gestion/medias/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'livres': ['Le Nom de la Rose (Disponible)', '1984 - George Orwell (Emprunté)'], 'dvds': <QuerySet [<DVD: DVD object (1)>, <DVD: DVD object (2)>]>, 'cds': <QuerySet [<CD: CD object (1)>, <CD: CD object (2)>]>, 'jeux_de_plateau': <QuerySet [<JeuDePlateau: JeuDePlateau object (1)>]>}]
+INFO 2024-08-21 15:25:28,962 basehttp "GET /gestion/medias/ HTTP/1.1" 200 901
+DEBUG 2024-08-21 15:25:37,715 utils (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-08-21 13:25:37.710017' AND "django_session"."session_key" = '01fmtu2c7b62u3enia7ja1x8vsfw1jyu') LIMIT 21; args=('2024-08-21 13:25:37.710017', '01fmtu2c7b62u3enia7ja1x8vsfw1jyu'); alias=default
+DEBUG 2024-08-21 15:25:37,718 utils (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 3 LIMIT 21; args=(3,); alias=default
+DEBUG 2024-08-21 15:25:37,721 utils (0.000) SELECT 1 AS "a" FROM "auth_group" INNER JOIN "auth_user_groups" ON ("auth_group"."id" = "auth_user_groups"."group_id") WHERE ("auth_user_groups"."user_id" = 3 AND "auth_group"."name" = 'Bibliothécaires') LIMIT 1; args=(1, 3, 'Bibliothécaires'); alias=default
+DEBUG 2024-08-21 15:25:37,729 utils (0.000) SELECT "gestion_emprunteur"."id", "gestion_emprunteur"."name", "gestion_emprunteur"."bloque" FROM "gestion_emprunteur"; args=(); alias=default
+INFO 2024-08-21 15:25:37,734 basehttp "GET /gestion/membres/ HTTP/1.1" 200 1129

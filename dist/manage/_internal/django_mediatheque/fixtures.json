@@ -1,0 +1,84 @@
+[
+  {
+    "model": "gestion.emprunteur",
+    "pk": 1,
+    "fields": {
+      "name": "Jean Dupont",
+      "bloque": false
+    }
+  },
+  {
+    "model": "gestion.emprunteur",
+    "pk": 2,
+    "fields": {
+      "name": "Marie Curie",
+      "bloque": false
+    }
+  },
+  {
+    "model": "gestion.livre",
+    "pk": 1,
+    "fields": {
+      "name": "Le Nom de la Rose",
+      "auteur": "Umberto Eco",
+      "date_emprunt": null,
+      "disponible": true,
+      "emprunteur": null
+    }
+  },
+  {
+    "model": "gestion.livre",
+    "pk": 2,
+    "fields": {
+      "name": "1984",
+      "auteur": "George Orwell",
+      "date_emprunt": null,
+      "disponible": false,
+      "emprunteur": null
+    }
+  },
+  {
+    "model": "gestion.cd",
+    "pk": 1,
+    "fields": {
+      "name": "Abbey Road",
+      "artiste": "The Beatles",
+      "date_emprunt": null,
+      "disponible": true,
+      "emprunteur": null
+    }
+  },
+  {
+    "model": "gestion.cd",
+    "pk": 2,
+    "fields": {
+      "name": "Random Access Memories",
+      "artiste": "Daft Punk",
+      "date_emprunt": null,
+      "disponible": true,
+      "emprunteur": null
+    }
+  },
+  {
+    "model": "gestion.dvd",
+    "pk": 1,
+    "fields": {
+      "name": "Inception",
+      "realisateur": "Christopher Nolan",
+      "date_emprunt": null,
+      "disponible": true,
+      "emprunteur": null
+    }
+  },
+  {
+    "model": "gestion.dvd",
+    "pk": 2,
+    "fields": {
+      "name": "The Matrix",
+      "realisateur": "The Wachowskis",
+      "date_emprunt": null,
+      "disponible": false,
+      "emprunteur": null
+    }
+  }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Média</title>
+</head>
+<body>
+    <h1>Ajouter un Média</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="media_type">Type de Média :</label>
+        <select name="media_type" id="media_type" onchange="this.form.submit()">
+            <option value="livre" {% if selected_media_type == 'livre' %}selected{% endif %}>Livre</option>
+            <option value="dvd" {% if selected_media_type == 'dvd' %}selected{% endif %}>DVD</option>
+            <option value="cd" {% if selected_media_type == 'cd' %}selected{% endif %}>CD</option>
+            <option value="jeudeplateau" {% if selected_media_type == 'jeudeplateau' %}selected{% endif %}>Jeu de Plateau</option>
+        </select><br><br>
+
+        <div id="media_form">
+            {% if form %}
+                {{ form.as_p }}
+            {% endif %}
+        </div>
+
+        <button type="submit">Ajouter Média</button>
+    </form>
+</body>
+</html>

@@ -6,7 +6,7 @@
 # Utiliser le fichier Pyinstaller sans pré-requis
 
 - Installer le fichier "manage.exe" situer dans "project_mediatheque/dist".
-- Dans un terminal de commande, naviguez vers  le dossier qui contient le fichier.
+- Dans un terminal de commande, naviguez vers  le dossier qui contient le fichier. '(project_mediatheque\dist\manage)
 - utilisez la commande `manage.exe runserver --noreload`
 
 # Installer Django

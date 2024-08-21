@@ -2,12 +2,6 @@
 
 - Réalisé avec Python et Django
   - Création d'une médiatheque fictive pour un projet.
- 
-# Utiliser le fichier Pyinstaller sans pré-requis
-
-- Installer le fichier "manage.exe" situer dans "project_mediatheque/dist".
-- Dans un terminal de commande, naviguez vers  le dossier qui contient le fichier. '(project_mediatheque\dist\manage)
-- utilisez la commande `manage.exe runserver --noreload`
 
 # Installer Django
 
@@ -94,4 +88,8 @@ Les données dans le test sont présent pour ajouter des emprunteurs dans la lis
 
 
 
-Pour installer et executer le programme, suivez ce qui est indiquer dans le fichier Read,me. J’ai tenter d’installer « PyInstaller »  et le configurer pour un fichier sans pré-requis, sans succès.
+# Utiliser le fichier Pyinstaller sans pré-requis
+
+- Installer le fichier "manage.exe" situer dans "project_mediatheque/dist".
+- Dans un terminal de commande, naviguez vers  le dossier qui contient le fichier. '(project_mediatheque\dist\manage)
+- utilisez la commande `manage.exe runserver --noreload`
